@@ -1,4 +1,4 @@
-############################################# IMPORTING ################################################
+# Importações
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox as mess
@@ -11,19 +11,17 @@ import pandas as pd
 import datetime
 import time
 
-############################################# FUNCTIONS ################################################
-
+# Função para assegurar que um diretório exista, caso contrário, o cria.
 def assure_path_exists(path):
     dir = os.path.dirname(path)
     if not os.path.exists(dir):
         os.makedirs(dir)
-
-##################################################################################
-
+        
+#função para atualizar a exibição do relógio na interface gráfica.
 def tick():
     time_string = time.strftime('%H:%M:%S')
     clock.config(text=time_string)
-    clock.after(200,tick)
+    clock.after(200, tick)
 
 ###################################################################################
 
