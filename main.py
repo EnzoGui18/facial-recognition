@@ -17,18 +17,18 @@ def assure_path_exists(path):
     if not os.path.exists(dir):
         os.makedirs(dir)
         
-#função para atualizar a exibição do relógio na interface gráfica.
+# Função para atualizar a exibição do relógio na interface gráfica.
 def tick():
     time_string = time.strftime('%H:%M:%S')
     clock.config(text=time_string)
     clock.after(200, tick)
 
-###################################################################################
-
+# Função para mostrar informações de contato
 def contact():
-    mess._show(title='Contact us', message="Please contact us on : 'shubhamkumar8180323@gmail.com' ")
+    mess._show(title='Contate-nos', message="Entre em contato: 'Egmiguel18@gmail.com' ")
 
-###################################################################################
+
+# Função para verificar se o arquivo haarcascade existe
 
 def check_haarcascadefile():
     exists = os.path.isfile("haarcascade_frontalface_default.xml")
@@ -37,8 +37,8 @@ def check_haarcascadefile():
     else:
         mess._show(title='Some file missing', message='Please contact us for help')
         window.destroy()
-
-###################################################################################
+        
+# Função para salvar a senha
 
 def save_pass():
     assure_path_exists("TrainingImageLabel/")
@@ -57,10 +57,10 @@ def save_pass():
             mess._show(title='Password Registered', message='New password was registered successfully!!')
             return
     op = (old.get())
-    newp= (new.get())
+    newp = (new.get())
     nnewp = (nnew.get())
     if (op == key):
-        if(newp == nnewp):
+        if (newp == nnewp):
             txf = open("TrainingImageLabel\psd.txt", "w")
             txf.write(newp)
         else:
@@ -72,38 +72,37 @@ def save_pass():
     mess._show(title='Password Changed', message='Password changed successfully!!')
     master.destroy()
 
-###################################################################################
+# Função para mudar a senha
 
 def change_pass():
     global master
     master = tk.Tk()
     master.geometry("400x160")
-    master.resizable(False,False)
+    master.resizable(False, False)
     master.title("Change Password")
     master.configure(background="white")
-    lbl4 = tk.Label(master,text='    Enter Old Password',bg='white',font=('comic', 12, ' bold '))
-    lbl4.place(x=10,y=10)
+    lbl4 = tk.Label(master, text='    Enter Old Password', bg='white', font=('comic', 12, ' bold '))
+    lbl4.place(x=10, y=10)
     global old
-    old=tk.Entry(master,width=25 ,fg="black",relief='solid',font=('comic', 12, ' bold '),show='*')
-    old.place(x=180,y=10)
+    old = tk.Entry(master, width=25, fg="black", relief='solid', font=('comic', 12, ' bold '), show='*')
+    old.place(x=180, y=10)
     lbl5 = tk.Label(master, text='   Enter New Password', bg='white', font=('comic', 12, ' bold '))
     lbl5.place(x=10, y=45)
     global new
-    new = tk.Entry(master, width=25, fg="black",relief='solid', font=('comic', 12, ' bold '),show='*')
+    new = tk.Entry(master, width=25, fg="black", relief='solid', font=('comic', 12, ' bold '), show='*')
     new.place(x=180, y=45)
     lbl6 = tk.Label(master, text='Confirm New Password', bg='white', font=('comic', 12, ' bold '))
     lbl6.place(x=10, y=80)
     global nnew
-    nnew = tk.Entry(master, width=25, fg="black", relief='solid',font=('comic', 12, ' bold '),show='*')
+    nnew = tk.Entry(master, width=25, fg="black", relief='solid', font=('comic', 12, ' bold '), show='*')
     nnew.place(x=180, y=80)
-    cancel=tk.Button(master,text="Cancel", command=master.destroy ,fg="black"  ,bg="red" ,height=1,width=25 , activebackground = "white" ,font=('comic', 10, ' bold '))
+    cancel = tk.Button(master, text="Cancel", command=master.destroy, fg="black", bg="red", height=1, width=25, activebackground="white", font=('comic', 10, ' bold '))
     cancel.place(x=200, y=120)
-    save1 = tk.Button(master, text="Save", command=save_pass, fg="black", bg="#00fcca", height = 1,width=25, activebackground="white", font=('comic', 10, ' bold '))
+    save1 = tk.Button(master, text="Save", command=save_pass, fg="black", bg="#00fcca", height=1, width=25, activebackground="white", font=('comic', 10, ' bold '))
     save1.place(x=10, y=120)
     master.mainloop()
 
-#####################################################################################
-
+# Função para verificar e salvar a senha
 def psw():
     assure_path_exists("TrainingImageLabel/")
     exists1 = os.path.isfile("TrainingImageLabel\psd.txt")
@@ -125,7 +124,8 @@ def psw():
     elif (password == None):
         pass
     else:
-        mess._show(title='Wrong Password', message='You have entered wrong password')
+        mess._show(title='Senha Errada', message='Você digitou a senha errada')
+
 
 ######################################################################################
 
