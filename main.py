@@ -127,20 +127,19 @@ def psw():
         mess._show(title='Senha Errada', message='Você digitou a senha errada')
 
 
-######################################################################################
 
+# Limpam os campos de entrada na interface gráfica.
 def clear():
     txt.delete(0, 'end')
     res = "1)Take Images  >>>  2)Save Profile"
     message1.configure(text=res)
-
 
 def clear2():
     txt2.delete(0, 'end')
     res = "1)Take Images  >>>  2)Save Profile"
     message1.configure(text=res)
 
-#######################################################################################
+# Captura imagens faciais utilizando a webcam e as salva para treinamento
 
 def TakeImages():
     check_haarcascadefile()
@@ -202,8 +201,7 @@ def TakeImages():
             res = "Enter Correct name"
             message.configure(text=res)
 
-########################################################################################
-
+# Função para treinar o modelo de reconhecimento facial usando as imagens capturadas
 def TrainImages():
     check_haarcascadefile()
     assure_path_exists("TrainingImageLabel/")
@@ -221,7 +219,7 @@ def TrainImages():
     message1.configure(text=res)
     message.configure(text='Total Registrations till now  : ' + str(ID[0]))
 
-############################################################################################3
+# Função para ler imagens de um diretório especificado e retornar arrays de faces e seus respectivos IDs
 
 def getImagesAndLabels(path):
     # get the path of all the files in the folder
@@ -243,7 +241,7 @@ def getImagesAndLabels(path):
         Ids.append(ID)
     return faces, Ids
 
-###########################################################################################
+# Função para realizar o reconhecimento facial utilizando o modelo treinado e registrar a presença em um arquivo CSV
 
 def TrackImages():
     check_haarcascadefile()
