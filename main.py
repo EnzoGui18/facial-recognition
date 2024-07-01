@@ -448,18 +448,43 @@ tv.configure(yscrollcommand=scroll.set)
 
 ###################### BUTTONS ##################################
 
-clearButton = tk.Button(frame2, text="Clear", command=clear  ,fg="black"  ,bg="#ff7221"  ,width=11 ,activebackground = "white" ,font=('comic', 11, ' bold '))
+###################### BUTTONS ##################################
+
+# Botão para limpar o campo de ID
+clearButton = tk.Button(frame2, text="Clear", command=clear, fg="black", bg="#ff7221", width=11,
+                        activebackground="white", font=('comic', 11, ' bold '))
 clearButton.place(x=335, y=86)
-clearButton2 = tk.Button(frame2, text="Clear", command=clear2  ,fg="black"  ,bg="#ff7221"  ,width=11 , activebackground = "white" ,font=('comic', 11, ' bold '))
-clearButton2.place(x=335, y=172)    
-takeImg = tk.Button(frame2, text="Take Images", command=TakeImages  ,fg="white"  ,bg="#6d00fc"  ,width=34  ,height=1, activebackground = "white" ,font=('comic', 15, ' bold '))
+
+# Botão para limpar o campo de nome
+clearButton2 = tk.Button(frame2, text="Clear", command=clear2, fg="black", bg="#ff7221", width=11,
+                         activebackground="white", font=('comic', 11, ' bold '))
+clearButton2.place(x=335, y=172)
+
+# Botão para capturar imagens
+takeImg = tk.Button(frame2, text="Take Images", command=TakeImages, fg="white", bg="#6d00fc", width=34, height=1,
+                    activebackground="white", font=('comic', 15, ' bold '))
 takeImg.place(x=30, y=300)
-trainImg = tk.Button(frame2, text="Save Profile", command=psw ,fg="white"  ,bg="#6d00fc"  ,width=34  ,height=1, activebackground = "white" ,font=('comic', 15, ' bold '))
+
+# Botão para salvar o perfil
+trainImg = tk.Button(frame2, text="Save Profile", command=psw, fg="white", bg="#6d00fc", width=34, height=1,
+                     activebackground="white", font=('comic', 15, ' bold '))
 trainImg.place(x=30, y=380)
-trackImg = tk.Button(frame1, text="Take Attendance", command=TrackImages  ,fg="black"  ,bg="#3ffc00"  ,width=35  ,height=1, activebackground = "white" ,font=('comic', 15, ' bold '))
-trackImg.place(x=30,y=50)
-quitWindow = tk.Button(frame1, text="Quit", command=window.destroy  ,fg="black"  ,bg="#eb4600"  ,width=35 ,height=1, activebackground = "white" ,font=('comic', 15, ' bold '))
+
+# Botão para rastrear imagens e registrar presença
+trackImg = tk.Button(frame1, text="Take Attendance", command=TrackImages, fg="black", bg="#3ffc00", width=35,
+                     height=1, activebackground="white", font=('comic', 15, ' bold '))
+trackImg.place(x=30, y=50)
+
+# Botão para sair da aplicação
+quitWindow = tk.Button(frame1, text="Quit", command=window.destroy, fg="black", bg="#eb4600", width=35, height=1,
+                       activebackground="white", font=('comic', 15, ' bold '))
 quitWindow.place(x=30, y=450)
+
+##################### END ######################################
+
+# Configuração do menu da janela principal
+window.configure(menu=menubar)
+window.mainloop()
 
 ##################### END ######################################
 
