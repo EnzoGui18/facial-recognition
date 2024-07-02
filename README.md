@@ -21,11 +21,10 @@ Neste projeto em Python, desenvolvi um sistema de controle de presença que regi
 )
 
 ### REGISTRANDO PRESENÇA:
-![Screenshot (10)](https://user-images.githubusercontent.com/37211676/58502149-97ec2a00-81a3-11e9-9658-8968da396c2e.png)
-
-### MOSTRANDO PRESENÇA REGISTRADA:
 ![Teste](https://github.com/EnzoGui18/facial-recognition/assets/81970792/3767fc69-4aa0-4e4f-bd93-9ef6264622c1)
 
+### MOSTRANDO PRESENÇA REGISTRADA:
+![WhatsApp Image 2024-06-26 at 21 15 16](https://github.com/EnzoGui18/facial-recognition/assets/81970792/1a1c478e-ca0d-4238-82bd-1bb2b66db5f4)
 
 ### OPÇÃO DE AJUDA NA BARRA DE MENU:
 ![Screenshot (12)](https://user-images.githubusercontent.com/37211676/58502152-991d5700-81a3-11e9-861a-9115526010c2.png)
